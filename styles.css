@@ -1,0 +1,15 @@
+
+body { background: #0b0c10; color: #fff; font-family: monospace; }
+.glass-panel { backdrop-filter: blur(10px); background: rgba(255,255,255,0.1); border-radius: 15px; padding: 2rem; margin: 2rem; }
+.glass-button { padding: 0.75rem 1.5rem; border: none; background: rgba(255,255,255,0.15); color: #00ffea; border-radius: 10px; text-decoration: none; }
+.name-light-effect::after { animation: light-scan 2.5s linear infinite; }
+@keyframes light-scan { from { left: -75%; } to { left: 125%; } }
+.tagline, .subtitle { animation: glowPulse 2s ease-in-out infinite alternate; }
+@keyframes glowPulse { from { text-shadow: 0 0 5px #00ffea; } to { text-shadow: 0 0 20px #00ffea; } }
+.animated-glow-text { animation: marquee 15s linear infinite; }
+@keyframes marquee { from { transform: translateX(100%); } to { transform: translateX(-100%); } }
+.scroll-reveal { opacity: 0; transform: translateX(-50px); transition: opacity 1s ease, transform 1s ease; }
+.scroll-reveal.active { opacity: 1; transform: translateX(0); }
+.scroll-reveal-right { transform: translateX(50px); }
+.skill-bubble { display: inline-block; margin: 1rem; width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease; }
+.skill-bubble:hover { transform: scale(1.2); box-shadow: 0 0 15px #00ffea; }
